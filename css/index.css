@@ -1,0 +1,671 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+
+}
+
+/* ---Menu desplegable dispositivo movil ----*/
+
+#btn-menu{
+    display: none;
+}
+
+header #div-nav label{
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+
+header img{
+    margin-left: 100px;
+}
+
+header #div-nav{
+    display: flex;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+
+}
+
+header nav ul li{
+
+    list-style: none;
+}
+
+header nav ul li a{
+
+    text-decoration: none;
+    margin: 48px;
+    
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    color: #060A24;
+    
+}
+
+header nav ul li a:hover{
+
+    
+    color: #00F3BB;
+    text-decoration: line-through;
+    
+}
+
+header nav ul li a:active{
+    color:#060a248a;
+    text-decoration: line-through;
+}
+
+
+
+/* --------- Media Query Menu desplegable ------------- */
+
+
+@media (max-width:768px){
+
+    
+    header img{
+        margin-left: 16px;
+    }
+
+    header #div-nav label{
+        
+        display: block;
+        margin-right: 19px;
+    }
+
+    #nav{
+        
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 224px;
+        background: #0000EC;
+        
+    }
+
+    #nav ul{
+        flex-direction: column;
+    }
+
+    header nav ul li{
+        margin-top: 16px;
+        margin-bottom: 24px;
+    }
+
+
+    header nav ul li a{
+
+        margin-left: 16px;
+        
+        font-size: 16px;
+        color:#FFFFFF;
+        
+    }
+
+    #btn-menu:checked ~ #nav{
+        display: none;
+    }
+
+
+
+}
+
+/* ------seccion inicio--------- */
+
+
+#div-start{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    margin-left: 200px;
+}
+
+#div-start h1{
+    width: 74%;
+    height: 84px;
+    font-size: 64px;
+    color: #060A24;
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 0;
+    
+}
+
+.point{
+    font-size: 64px;
+    color: #0000EC;
+    letter-spacing: 0;
+}
+
+#div-start p{
+    width: 63%;
+    height: 48px;
+    color: #060A24;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+}
+
+
+
+
+@media (max-width:768px){
+
+    #div-start{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto auto auto 16px; 
+    }
+
+    #div-start h1{
+        width: 98%;
+        height: 100%;
+        /* font-size: 36px; */
+        
+        letter-spacing: 0;
+        
+    }
+
+    #div-start p{
+        width: 98%;
+        height: 100%;
+        
+        /* font-size: 14px; */
+        margin-top: 16px;
+    }
+
+
+  
+}
+
+
+/* -----boton conoce mas----- */
+
+#div-btn{
+    width: 226px;
+    height: 56px;
+    margin-top: 56px;
+    margin-left: 200px;
+    
+
+}
+
+#div-btn button{
+    width: 100%;
+    height: 100%;
+    background: #00F3BB;
+    color: #060A24;
+    font-size: 18px;
+    border-style: none;
+}
+
+
+#div-btn button:hover{
+    background: linear-gradient(45deg,#00F0B8 ,#0000FE);
+    border-style: none;
+    color: #FFFFFF ;
+}
+
+
+/* ------ Media Query BTN CONOCE MAS------- */
+
+@media (max-width:768px){
+
+    #div-btn{
+        width: 90%;
+        height: 48px;
+        margin: 36px auto auto 16px; 
+    }
+
+}
+
+
+/* -------- Seccion Episodios --------- */
+
+#play-list{
+    position: relative;
+    width: 100%;
+    height: 1043px;
+    display: flex;
+    flex-direction: column;
+    
+   
+    background: linear-gradient(60deg,#0000A3 ,#0000FF);
+    
+}
+
+
+
+
+#div-play-list-img{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+/* .img-play{
+    width: 584px;
+    height: 232px;
+    padding: 2%;
+} */
+
+.img-play{
+    
+    padding: 2%;
+}
+
+
+
+
+
+#play-list #div-play-list h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #FFFFFF;
+    font-size: 48px;
+    margin: 186px auto 26px 200px;
+}
+
+
+/* ------Media query play list ----------*/
+
+@media (max-width:768px){
+
+    #play-list{
+        
+        width: 100%;
+        height: 100%;
+        
+        
+    }
+
+    #play-list #div-play-list h2{
+        font-family: 'IBM Plex Sans', sans-serif;
+        color: #FFFFFF;
+        font-size: 36px;
+        margin: 88px auto auto 16px;
+    }
+
+    
+
+
+   .img-play-list1{
+       width: 100%;
+       content: url(imagenes/embed1_.png);
+   } 
+
+   
+   .img-play-list2{
+    width: 100%;
+    content: url(imagenes/embed2_.png);
+    } 
+
+    .img-play-list3{
+        width: 100%;
+        content: url(imagenes/embed3_.png);
+    } 
+
+    .img-play-list4{
+        width: 100%;
+        content: url(imagenes/embed4_.png);
+    } 
+
+    .img-play{
+        margin-bottom: 2%;
+    }
+
+
+
+
+}
+
+
+/* -----------seccion phone ---------- */
+
+
+#phone{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#phone #phone-section h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #060A24 ;
+    font-size: 48px;
+    margin-bottom: 24px;
+
+}
+
+
+#phone #phone-section p{
+    
+    width: 464px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #060A24 ;
+    font-size: 16px;
+}
+
+
+
+@media (max-width:768px){
+
+    #phone{
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #div-img-phone{
+        width: 100%;
+    }
+
+    #img-phone{
+        width: 100%;
+    }
+
+    #phone-section{
+        width: 100%;
+        height: 100%;
+        margin-left: 5%;
+        
+    }
+
+    #phone #phone-section h2{
+        width: 100%;
+    
+    }
+    
+    
+    #phone #phone-section p{
+        
+       width: 100%;
+    }
+
+
+}
+
+
+
+/* ------ Seccion Invitadas ----------*/
+
+
+#invitadas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#invitadas h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #060A24;
+    font-size: 48px;
+    margin-left: 14%;
+    margin-bottom: 1%;
+
+}
+
+#div-img-invitadas{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.img-invitadas{
+    width: 33.3%;
+    height: 364px;
+}
+
+
+/* ------ Media Query Invitados especiales ------ */
+
+
+@media (max-width:768px){
+
+    #div-img-invitadas{
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+      }
+
+      .img-invitadas{
+        width: 100%;
+        height: 364px;
+    }
+
+    #invitadas h2{
+        width: 100%;
+        margin-top: 2%;
+        margin-left: 5%;
+        margin-bottom: 1%;
+    
+    }
+
+
+}
+
+
+
+/* ------- Seccion Algunos de nuestros temas -------- */
+
+
+#temas{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#parrafo{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #060A24 ;
+    font-size: 48px;
+    margin-top: 2%;
+    margin-left: 14%;
+}
+
+#div-iconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+
+    
+}
+
+.div-iconos-img{
+    margin-top: 2%;
+    width: 260px;
+    height: 130px;
+    text-align: center;
+}
+
+.p-iconos{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #060A24 ;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* -------- Media query Temas -------- */
+
+
+@media (max-width:768px){
+
+    #temas{
+        width: 100%;
+        
+    }
+    #parrafo{
+        width: 100%;
+        margin-left: 5%;
+    }
+
+    #div-iconos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+    
+        
+    }
+
+    
+    .div-iconos-img{
+        margin-top: 20%;
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    .p-iconos{
+        width: 100%;
+    }
+    
+
+
+}
+
+
+
+/* ------- seccion ultimas novedades --------- */
+
+
+#div-novedades{
+    margin-top: 65px;
+    width: 100%;
+    height: 518px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(60deg,#0000A3 ,#0000FF);
+    
+}
+
+#div-novedades p{
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #FFFFFF ;
+    font-size: 48px;
+    
+}
+
+#div-novedades button{
+
+    width: 345px;
+    height: 56px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #060A24;
+    font-size: 18px;
+    font-weight: bold;
+    background: #00F3BB;
+    border-style: none;
+    margin-top: 36px;
+
+}
+
+
+/* -------Media Query Novedades ------ */
+
+@media (max-width:768px){
+
+    #div-novedades p{
+
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    #div-novedades button{
+
+        width: 90%;
+
+    }
+}
+
+
+
+
+
+/* -------- Footer ---------- */
+
+
+footer{
+    width: 100%;
+    padding: 1.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p{
+    font-family: 'IBM Plex Mono', monospace;
+    color: #060A24;
+    font-size: 16px;
+}
+
+footer i{
+    margin: 10px;
+}
+
+
+
+
+/* --------Media Query Footer ---------- */
+
+
+
+@media (max-width:768px){
+
+    footer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+    }
+    
+   
+    #div-i{
+        margin-top: 16px;
+        margin-bottom: 31px;
+    }
+   
+
+}
